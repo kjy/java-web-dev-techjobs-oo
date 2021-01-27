@@ -4,18 +4,19 @@ import java.util.Objects;
 
 public class Employer {
     private int id;
-    private static int nextId = 1;
+    private static int nextId = 1;  // static -- changing value is not stored within any Employer object
     private String value;
 
-    public Employer() {
-        id = nextId;
-        nextId++;
+    public Employer() {  // first constructor accepts no arguments
+        id = nextId;  // assigns value of nextId num
+        nextId++;  // increments Id num
     }
 
-    public Employer(String value) {
-        this();
+    public Employer(String value) {  // second constructor
+        this();  // initializes id for the obj by calling the first constructor
         this.value = value;
     }
+
 
     // Custom toString, equals, and hashCode methods:
 
@@ -28,7 +29,7 @@ public class Employer {
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
         if (this == o) return true;
         if (!(o instanceof Employer)) return false;
-        Employer employer = (Employer) o;
+        Employer employer = (Employer) o; // casting to class Employer
         return getId() == employer.getId();
     }
 
