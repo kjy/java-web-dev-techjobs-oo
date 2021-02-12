@@ -19,7 +19,6 @@ public class JobTest {
 
 
     @Before
-
     @Test  // Test the empty constructor
     public void testSettingJobId() {
         myjob1 = new Job();
